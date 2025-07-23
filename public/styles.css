@@ -1,0 +1,164 @@
+body {
+  font-family: sans-serif;
+  background-color: #e2f2f6;
+  color: #676261;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #676261;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.search-container {
+  width: 300px;
+}
+
+#search-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #676261;
+  border-radius: 5px;
+  background-color: #aef0ff;
+  color: #676261;
+}
+
+main {
+  padding: 20px 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+}
+
+#day-filter {
+  padding: 10px;
+  border: 1px solid #676261;
+  border-radius: 5px;
+  background-color: #aef0ff;
+  color: #676261;
+  margin-left: 10px;
+}
+
+#add-appointment-button {
+  background-color: #676261;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.table-container {
+  background-color: #aef0ff;
+  border: 1px solid #676261;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #676261;
+}
+
+th {
+  background-color: #adf0ff;
+  font-weight: bold;
+}
+
+.dialog {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.dialog-content {
+  background-color: #aef0ff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #676261;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 5px;
+}
+
+.close-button {
+  color: #676261;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #676261;
+  border-radius: 5px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+#cancel-button {
+  background-color: #fff;
+  color: #676261;
+  border: 1px solid #676261;
+}
+
+#save-button {
+  background-color: #676261;
+  color: #fff;
+}

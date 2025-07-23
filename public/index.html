@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Agendamiento</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Sistema de Agendamiento</h1>
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Buscar por cliente, ID o descripción..." />
+        </div>
+      </header>
+      <main>
+        <div class="controls">
+          <div class="filter-container">
+            <label for="day-filter">Filtrar por día:</label>
+            <select id="day-filter">
+              <option value="Todos">Todos</option>
+              <option value="Lunes">Lunes</option>
+              <option value="Martes">Martes</option>
+              <option value="Miércoles">Miércoles</option>
+              <option value="Jueves">Jueves</option>
+              <option value="Viernes">Viernes</option>
+              <option value="Sábado">Sábado</option>
+              <option value="Domingo">Domingo</option>
+            </select>
+          </div>
+          <button id="add-appointment-button">Agendar Nueva Cita</button>
+        </div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Cliente</th>
+                <th>Día</th>
+                <th>Hora</th>
+                <th>Estado</th>
+                <th>Descripción</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="appointments-table-body"></tbody>
+          </table>
+        </div>
+      </main>
+      <div id="dialog" class="dialog">
+        <div class="dialog-content">
+          <span class="close-button">&times;</span>
+          <h2 id="dialog-title"></h2>
+          <form id="appointment-form">
+            <input type="hidden" id="appointment-id" />
+            <div class="form-group">
+              <label for="client-name">Cliente</label>
+              <input type="text" id="client-name" required />
+            </div>
+            <div class="form-group">
+              <label for="appointment-day">Día</label>
+              <select id="appointment-day" required>
+                <option value="">Seleccionar día</option>
+                <option value="Lunes">Lunes</option>
+                <option value="Martes">Martes</option>
+                <option value="Miércoles">Miércoles</option>
+                <option value="Jueves">Jueves</option>
+                <option value="Viernes">Viernes</option>
+                <option value="Sábado">Sábado</option>
+                <option value="Domingo">Domingo</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="appointment-time">Hora</label>
+              <input type="time" id="appointment-time" required />
+            </div>
+            <div class="form-group">
+              <label for="appointment-description">Descripción</label>
+              <textarea id="appointment-description" rows="3"></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="button" id="cancel-button">Cancelar</button>
+              <button type="submit" id="save-button"></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
